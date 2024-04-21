@@ -61,7 +61,8 @@ class ProductManager {
             let productSougth = await this.getProducts()
             //console.log(productSougth)
             const productId = productSougth.find(u => u.id === id)
-            console.log( "el producto encontrado es", productId)
+            //console.log( "el producto encontrado es", productId)
+            return (productId)
             if(productId === undefined){
                 console.log("el producto no esta en el archivo")
             }
@@ -93,7 +94,7 @@ class ProductManager {
 module.exports = ProductManager //para exportar 
 
 //crear producto nuevo
-const manager = new ProductManager()
+//const manager = new ProductManager()
 
 // Agregar productos
 /* manager.addProduct({
